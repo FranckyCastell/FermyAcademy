@@ -1,6 +1,6 @@
 # FermyAcademy
 
-_Este proyecto consiste en una Web para una empresa de Cursos._
+_Este proyecto consiste en la creación de una Web para una Empresa para la realización de cursos / ayudas escolares hacia alumnos.._
 
 ## Comenzando 🚀
 
