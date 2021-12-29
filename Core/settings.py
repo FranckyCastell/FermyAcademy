@@ -116,3 +116,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# URL TO MEDIA FILES 'IMAGES'
+MEDIA_URL = '/media/'
+
+# MEDIA ROOT FILES 'IMAGES'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# EMAILS API
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "francky.castell8@gmail.com"  # EMAIL GMAIL
+EMAIL_HOST_PASSWORD = "francesc8CASTELL"  # CREDENTIALS GMAIL

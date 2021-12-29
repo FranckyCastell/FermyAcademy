@@ -1,15 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "Core/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% load static %}
 
-<body>
-    <p>about</p>
-</body>
+{% block title %} <title> Sobre Nosotros </title> {% endblock %}
 
-</html>
+{% block content %}
+
+<main class="container">
+    <section class="row">
+
+        {% for user in users %}
+
+            <div class="card col-md-4 col-sm-12 mt-5 mb-5 mx-3" style="width: 18rem;">
+                <img src="{{user.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-warning text-center"> {{user.name}} </h5>
+                    <hr>
+                    <p class="card-text"> {{user.description}} </p>
+                </div>
+
+                <hr>
+
+                <div class="text-center mt-3">
+                    <ul class="list-inline text-centre">
+                        <li class="list-inline-item mx-3">
+                            <a aria-label="Twitter" class="social-link rounded-circle mr-3 text-white" href=""><i
+                                    class="fab fa-twitter fa-2x"></i></a>
+                        </li>
+            
+                        <li class="list-inline-item mx-3">
+                            <a aria-label="Instagram" class="social-link rounded-circle mr-3 text-white" href=""><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+            
+                        <li class="list-inline-item mb-3 mx-3">
+                            <a aria-label="Facebook" class="social-link rounded-circle text-white" href=""><i
+                                    class="fab fa-facebook-f fa-2x"></i></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        {% endfor %}
+
+    </section>
+</main>
+
+{% endblock %}
