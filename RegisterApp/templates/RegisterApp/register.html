@@ -1,0 +1,25 @@
+<!-- EXTENDS BASE.HTML TEMPLATE -->
+{% extends "Core/base.html" %}
+
+<!-- LOAD STATIC -->
+{% load static %}
+
+<!-- CODE OF BODY PAGE -->
+{% block content %}
+
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto col-lg-5">
+    <div class="card border-0 rounded-3 pb-3 pt-3">
+        <p class="dancing display-4 text-center"> Registrate </p>
+        <hr class="mt-4 mb-5 mx-5">
+        <form class="mx-5" method="POST" action=""> {% csrf_token %}
+            
+            <table class="mb-4">
+                {{ form.as_table }}
+            </table>
+
+            <button type="submit" id="submit" class="zoom btn btn-outline-success text-center">Enviar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

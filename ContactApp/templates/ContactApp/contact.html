@@ -7,51 +7,51 @@
 {% block content %}
 
 <main class="container">
-        <div class="row mt-5">
-            <section class="col-12">
-                <p class="lead text-center display-6"> Formulario de Contacto </p>
-            </section>
-        </div>
+    <div class="row mt-5">
+        <section class="col-12">
+            <p class="dancing text-center display-4"> Formulario de Contacto </p>
+        </section>
+    </div>
 
-        <hr class="mt-4 mb-3">
+    <hr class="mt-4 mb-3">
 
-        <div class="row">
-            <section class="col-md-6 col-sm-12 lead">
-                <form action="" method="post"> {% csrf_token %}
-                    <div class="fieldWrapper">
-                        <label style="width: 100%;" for="{{ form.name.id_for_label }}">Nombre Completo:
-                            {{ form.name }}
-                        </label>
-                    </div>
+    <div class="row mt-5">
+        <section class="col-md-6 col-sm-12 lead">
+            <form action="" method="post"> {% csrf_token %}
+                <div class="fieldWrapper">
+                    <label style="width: 100%;" for="{{ form.name.id_for_label }}">Nombre Completo:
+                        {{ form.name }}
+                    </label>
+                </div>
 
-                    <div class="fieldWrapper mt-3">
-                        <label style="width: 100%;" for="{{ form.email.id_for_label }}">Email:
-                            {{ form.email }}
-                        </label>
-                    </div>
+                <div class="fieldWrapper mt-3">
+                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Email:
+                        {{ form.email }}
+                    </label>
+                </div>
 
-                    <div class="fieldWrapper mt-3">
-                        <label style="width: 100%;" for="{{ form.phone.id_for_label }}">Teléfono:
-                            {{ form.phone }}
-                        </label>
-                    </div>
+                <div class="fieldWrapper mt-3">
+                    <label style="width: 100%;" for="{{ form.phone.id_for_label }}">Teléfono:
+                        {{ form.phone }}
+                    </label>
+                </div>
 
-                    <div class="fieldWrapper mt-3">
-                        <label style="width: 100%;" for="{{ form.email.id_for_label }}">Mensaje:
-                            {{ form.message }}
-                        </label>
-                    </div>
+                <div class="fieldWrapper mt-3">
+                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Mensaje:
+                        {{ form.message }}
+                    </label>
+                </div>
 
-                    <button type="submit" class="btn btn-outline-success mt-3"> Enviar </button>
-                </form>
-            </section>
+                <button type="submit" class="btn btn-outline-success mt-3 zoom"> Enviar </button>
+            </form>
+        </section>
 
-            <section class="col-md-6 col-sm-12">
-                <img src="{% static 'Core/assets/img/imgEmail.webp' %}" alt="Email Image"
-                    style="max-width: 100%; height: 100%;">
-            </section>
-        </div>
-        <hr class="mb-5">
+        <section class="col-md-6 col-sm-12 text-center">
+            <img src="{% static 'Core/assets/img/contact.png' %}" alt="Contact Image"
+                style="max-width: 80%; height: 80%;">
+        </section>
+    </div>
+    <hr class="mb-5">
 </main>
 
 {% endblock %}

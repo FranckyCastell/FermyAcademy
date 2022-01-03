@@ -1,15 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "Core/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% load static %}
 
-<body>
-    <p>courses</p>
-</body>
+{% block title %} <title> Cursos </title> {% endblock %}
 
-</html>
+{% block extra %} <link rel="stylesheet" href="{% static 'Core/css/courses.css'%}" /> {% endblock %}
+
+{% block content %}
+
+<main class="container">
+
+    <section>
+        <div class="container py-2">
+            <div class="row mt-5">
+                <section class="col-12">
+                    <p class="dancing text-center display-4"> Nuestros Cursos </p>
+                </section>
+            </div>
+    
+            <hr class="mt-4 mb-5">
+
+            {% for course in courses %}
+
+            {% if forloop.counter|divisibleby:2 %}
+
+            <article class="postcard light blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="{{course.image.url}}" alt="{{course.title}}" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue"><a href="#">{{course.title}}</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{course.updated}}
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{course.description}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-euro-sign mr-2"></i></i>&nbsp;&nbsp;{{course.price}} / hora</li>
+                    </ul>
+                </div>
+            </article>
+
+            {% else %}
+
+            <article class="postcard light red">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="{{course.image.url}}" alt="{{course.title}}" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title red"><a href="#">{{course.title}}</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{course.updated}}
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{course.description}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-euro-sign mr-2"></i></i>&nbsp;&nbsp;{{course.price}} / hora</li>
+                    </ul>
+                </div>
+            </article>
+
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}

@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from CoursesApp.models import Courses
 
 # Create your views here.
 
 
 def courses(request):
-    return render(request, 'CoursesApp/courses.html')
+    courses = Courses.objects.all()
+
+    context = {'courses': courses}
+    return render(request, 'CoursesApp/courses.html', context)

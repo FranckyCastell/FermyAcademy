@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'ContactApp',  # CONTACT
     'CoursesApp',  # COURSES
     'HomeApp',  # HOME
+    'RegisterApp',  # REGISTER
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "francky.castell8@gmail.com"  # EMAIL GMAIL
 EMAIL_HOST_PASSWORD = "francesc8CASTELL"  # CREDENTIALS GMAIL
+
+# LOGIN REDIRECT
+LOGIN_REDIRECT_URL = 'home'
