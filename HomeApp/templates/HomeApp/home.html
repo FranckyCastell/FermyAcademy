@@ -6,8 +6,22 @@
 
 {% block content %}
 
-<main>
-    
+<main class="container">
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+
+            <p class="dancing display-5">Fermy Academy</p>
+
+            <hr class="mt-4 mb-3" style="width: 50%; margin: auto;">
+
+            <p class="text-muted fst-italic"> Clases de repaso de física, matemáticas, etc. para todos los niveles.
+                ¡También disponible en inglés, catalán o euskera!</p>
+
+            <div class="card pt-3 pb-3 mb-5 mt-5">
+                <a class="fs-5 text-warning raleway" href="{% url 'reserve' %}">Reserva ya tu primera Clase !</a>
+            </div>
+        </div>
+    </div>
 </main>
 
 {% endblock %}

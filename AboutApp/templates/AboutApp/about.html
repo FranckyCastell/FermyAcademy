@@ -9,46 +9,52 @@
 <main class="container">
     <section class="row">
 
-        <div class="row mt-5">
+        <div class="mt-5">
             <section class="col-12">
                 <p class="dancing text-center display-4"> Sobre Nosotros </p>
             </section>
         </div>
 
-        <hr class="mt-4 mb-3">
+        <hr class="mt-4 mb-3" style="width: 50%; margin: auto;">
 
+        <p class="raleway text-center mx-auto mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic
+            aut nesciunt eveniet reiciendis, soluta iure et magnam, cupiditate veritatis recusandae vitae ab odit
+            voluptas possimus quis? Inventore, animi velit.</p>
+    </section>
+
+    <section class="row">
         {% for user in users %}
 
-            <div class="card col-md-4 col-sm-12 mt-5 mb-5 mx-3" style="width: 18rem;">
-                <img src="{{user.image.url}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title text-warning text-center zoom"> {{user.name}} </h5>
-                    <hr>
-                    <p class="card-text"> {{user.description}} </p>
-                </div>
-
-                <hr>
-
-                <div class="text-center mt-3">
-                    <ul class="list-inline text-centre">
-                        <li class="list-inline-item mx-3 zoom">
-                            <a aria-label="Twitter" class="social-link rounded-circle mr-3 text-white" href=""><i
-                                    class="fab fa-twitter fa-2x"></i></a>
-                        </li>
-            
-                        <li class="list-inline-item mx-3 zoom">
-                            <a aria-label="Instagram" class="social-link rounded-circle mr-3 text-white" href=""><i
-                                    class="fab fa-instagram fa-2x"></i></a>
-                        </li>
-            
-                        <li class="list-inline-item mb-3 mx-3 zoom">
-                            <a aria-label="Facebook" class="social-link rounded-circle text-white" href=""><i
-                                    class="fab fa-facebook-f fa-2x"></i></i></a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="card col-md-4 col-sm-12 mt-5 mb-3 mx-5" style="width: 16rem; height: 35rem;">
+            <img src="{{user.image.url}}" class="card-img-top" alt="{{user.name}}">
+            <div class="card-body">
+                <h5 class="card-title text-warning text-center zoom"> {{user.name}} </h5>
+                <hr class=" mb-3" style="width: 30%; margin: auto;">
+                <p class="card-text raleway fw-bold"> {{user.description}} </p>
             </div>
-        
+
+            <hr class=" mb-3" style="width: 65%; margin: auto;">
+
+            <div class="text-center">
+                <ul class="list-inline text-centre">
+                    <li class="list-inline-item mx-3 zoom">
+                        <a aria-label="Twitter" class="social-link rounded-circle mr-3 text-white" href="https://twitter.com/"><i
+                                class="fab fa-twitter fa-2x"></i></a>
+                    </li>
+
+                    <li class="list-inline-item mx-3 zoom">
+                        <a aria-label="Instagram" class="social-link rounded-circle mr-3 text-white" href="https://www.instagram.com/"><i
+                                class="fab fa-instagram fa-2x"></i></a>
+                    </li>
+
+                    <li class="list-inline-item mb-3 mx-3 zoom">
+                        <a aria-label="Facebook" class="social-link rounded-circle text-white" href="https://es-es.facebook.com/"><i
+                                class="fab fa-facebook-f fa-2x"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         {% endfor %}
 
     </section>

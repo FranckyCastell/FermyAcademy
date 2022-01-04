@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-kz!jxp4*@o%+fg)n2hftvste_)t14+u1w0o*#kfkvopgg-wy0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'CoursesApp',  # COURSES
     'HomeApp',  # HOME
     'RegisterApp',  # REGISTER
+    'ReserveApp',  # RESERVES
 ]
 
 MIDDLEWARE = [
@@ -129,8 +130,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "francky.castell8@gmail.com"  # EMAIL GMAIL
-EMAIL_HOST_PASSWORD = "francesc8CASTELL"  # CREDENTIALS GMAIL
+EMAIL_HOST_USER = ""  # EMAIL GMAIL
+EMAIL_HOST_PASSWORD = ""  # CREDENTIALS GMAIL
 
 # LOGIN REDIRECT
 LOGIN_REDIRECT_URL = 'home'

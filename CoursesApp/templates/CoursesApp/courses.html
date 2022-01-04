@@ -18,7 +18,7 @@
                 </section>
             </div>
     
-            <hr class="mt-4 mb-5">
+            <hr class="mt-4 mb-5" style="width: 50%; margin: auto;">
 
             {% for course in courses %}
 
@@ -29,15 +29,15 @@
                     <img class="postcard__img" src="{{course.image.url}}" alt="{{course.title}}" />
                 </a>
                 <div class="postcard__text t-dark">
-                    <h1 class="postcard__title blue"><a href="#">{{course.title}}</a></h1>
-                    <div class="postcard__subtitle small">
+                    <h1 class="postcard__title blue raleway fw-bold text-dark"><a href="#">{{course.title}}</a></h1>
+                    <div class="postcard__subtitle small raleway fw-bold text-dark">
                         <time datetime="2020-05-25 12:00:00">
                             <i class="fas fa-calendar-alt mr-2"></i>{{course.updated}}
                         </time>
                     </div>
                     <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">{{course.description}}</div>
-                    <ul class="postcard__tagbox">
+                    <div class="postcard__preview-txt raleway fw-bold text-dark">{{course.description}}</div>
+                    <ul class="postcard__tagbox raleway fw-bold text-dark">
                         <li class="tag__item"><i class="fas fa-euro-sign mr-2"></i></i>&nbsp;&nbsp;{{course.price}} / hora</li>
                     </ul>
                 </div>
@@ -50,15 +50,15 @@
                     <img class="postcard__img" src="{{course.image.url}}" alt="{{course.title}}" />
                 </a>
                 <div class="postcard__text t-dark">
-                    <h1 class="postcard__title red"><a href="#">{{course.title}}</a></h1>
-                    <div class="postcard__subtitle small">
+                    <h1 class="postcard__title red raleway fw-bold text-dark"><a href="#">{{course.title}}</a></h1>
+                    <div class="postcard__subtitle small raleway fw-bold text-dark">
                         <time datetime="2020-05-25 12:00:00">
                             <i class="fas fa-calendar-alt mr-2"></i>{{course.updated}}
                         </time>
                     </div>
                     <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt">{{course.description}}</div>
-                    <ul class="postcard__tagbox">
+                    <div class="postcard__preview-txt raleway fw-bold text-dark">{{course.description}}</div>
+                    <ul class="postcard__tagbox raleway fw-bold text-dark">
                         <li class="tag__item"><i class="fas fa-euro-sign mr-2"></i></i>&nbsp;&nbsp;{{course.price}} / hora</li>
                     </ul>
                 </div>

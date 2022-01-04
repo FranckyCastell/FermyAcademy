@@ -16,3 +16,8 @@ class UserRegisterForm (UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         help_text = {k: "" for k in fields}
+
+    def __init__(self, *args, **kwargs):
+        super(UserRegisterForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'

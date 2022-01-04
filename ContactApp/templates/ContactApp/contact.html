@@ -13,31 +13,31 @@
         </section>
     </div>
 
-    <hr class="mt-4 mb-3">
+    <hr class="mt-4 mb-3" style="width: 50%; margin: auto;">
 
     <div class="row mt-5">
-        <section class="col-md-6 col-sm-12 lead">
+        <section class="col-md-6 col-sm-12 lead raleway fw-bold fs-6">
             <form action="" method="post"> {% csrf_token %}
                 <div class="fieldWrapper">
-                    <label style="width: 100%;" for="{{ form.name.id_for_label }}">Nombre Completo:
+                    <label style="width: 100%;" for="{{ form.name.id_for_label }}">Nombre Completo
                         {{ form.name }}
                     </label>
                 </div>
 
                 <div class="fieldWrapper mt-3">
-                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Email:
+                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Email
                         {{ form.email }}
                     </label>
                 </div>
 
                 <div class="fieldWrapper mt-3">
-                    <label style="width: 100%;" for="{{ form.phone.id_for_label }}">Teléfono:
+                    <label style="width: 100%;" for="{{ form.phone.id_for_label }}">Teléfono
                         {{ form.phone }}
                     </label>
                 </div>
 
                 <div class="fieldWrapper mt-3">
-                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Mensaje:
+                    <label style="width: 100%;" for="{{ form.email.id_for_label }}">Mensaje
                         {{ form.message }}
                     </label>
                 </div>
@@ -46,7 +46,7 @@
             </form>
         </section>
 
-        <section class="col-md-6 col-sm-12 text-center">
+        <section class="col-md-6 col-sm-12 text-center d-none d-md-block">
             <img src="{% static 'Core/assets/img/contact.png' %}" alt="Contact Image"
                 style="max-width: 80%; height: 80%;">
         </section>

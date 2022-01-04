@@ -1,0 +1,86 @@
+{% extends "Core/base.html" %}
+
+{% load static %}
+
+{% block title %} <title> Reservas </title> {% endblock %}
+
+{% block content %}
+
+<main class="container">
+
+    <div class="row mt-5">
+        <section class="col-12">
+            <p class="dancing text-center display-4"> Reserva de Clase </p>
+        </section>
+    </div>
+
+    <hr class="mt-4 mb-3" style="width: 50%; margin: auto;">
+
+    <div class="row mt-5">
+        <p class="mx-auto raleway text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            consequatur asperiores mollitia quidem sint
+            aliquam sunt rerum soluta numquam incidunt.</p>
+        <p class="mx-auto raleway text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro?</p>
+    </div>
+
+    <section class="row mt-5">
+        <div class="col-md-4 col-xs-4 d-none d-md-block">
+            <div>
+                <img class="imgReserve rounded-3" src="{% static 'Core/assets/img/eso.jpg'%}" style="width: 350px; height: 250px;">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-4 d-none d-md-block">
+            <div>
+                <img class="imgReserve rounded-3" src="{% static 'Core/assets/img/bachillerato.jpg'%}" style="width: 350px; height: 250px;">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-4 d-none d-md-block">
+            <div>
+                <img class="imgReserve rounded-3" src="{% static 'Core/assets/img/universidad.jpg'%}" style="width: 350px; height: 250px;">
+            </div>
+        </div>
+    </section>
+
+    <hr class="mt-5 mb-3">
+
+    <div class="row mt-5">
+        <div>
+            <p class="raleway text-center fs-3">Rellenar Formulario</p>
+            <hr class=" mb-3" style="width: 20%; margin: auto;">
+        </div>
+
+        <div class="col-md-3"></div>
+        <section class="col-md-6 col-sm-12">
+            <form class="mx-5" method="POST" action=""> {% csrf_token %}
+
+                <div class="fieldWrapper mb-3">
+                    <label class="raleway" for="{{ form.courses.id_for_label }}">Curso:</label>
+                    {{ form.courses }}
+                </div>
+
+                <div class="fieldWrapper mb-3">
+                    <label class="raleway" for="{{ form.date.id_for_label }}">Fecha:</label>
+                    {{ form.date }}
+                </div>
+
+                <div class="fieldWrapper mb-3">
+                    <label class="raleway" for="{{ form.time.id_for_label }}">Hora:</label>
+                    {{ form.time }}
+                </div>
+
+                <div class="fieldWrapper">
+                    <label class="raleway" for="{{ form.observations.id_for_label }}">Observaciónes</label>
+                    {{ form.observations }}
+                </div>
+
+                <button type="submit" id="submit"
+                    class="raleway fw-bold mt-4 mb-5 ms-auto zoom btn btn-outline-success text-center">Reservar</button>
+            </form>
+        </section>
+        <div class="col-md-3"></div>
+    </div>
+</main>
+
+{% endblock %}

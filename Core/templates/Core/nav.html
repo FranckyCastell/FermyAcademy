@@ -6,29 +6,34 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
+        <span class="mx-1 d-none d-md-block" style="font-size: 25px;">|</span>
+
+        <div class="mx-1 collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto raleway">
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'home' %}">Home
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'courses' %}">Cursos</a>
+                    <a class="nav-link active" href="{% url 'courses' %}">Cursos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                    <a class="nav-link active" href="{% url 'reserve' %}">Reservas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">Sobre Nosotros</a>
+                    <a class="nav-link active" href="{% url 'contact' %}">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'about' %}">Sobre Nosotros</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav ms-auto mx-3">
                 {% if request.user.is_authenticated %}
-                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-primary zoom" href="{% url 'home' %}">{{ user.get_username }}</a></li>
+                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-primary zoom" href="{% url 'home' %}">Mi área Personal</a></li>
                 {% else %}
-                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-success zoom" href="{% url 'login' %}">Log-In</a></li>
+                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-success zoom" href="{% url 'login' %}">Acceder / Registrarse</a></li>
                 {% endif %}
             </ul>
         </div>

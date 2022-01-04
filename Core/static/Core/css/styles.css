@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 
 .dancing {
   font-family: "Dancing Script", cursive;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
 }
 
 .zoom {
@@ -10,4 +15,25 @@
 
 .zoom:hover {
   transform: scale(1.1);
+}
+
+.imgReserve {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  opacity: 0.75;
+  overflow: hidden;
+  transition-timing-function: ease-in;
+  transition: 1.5s;
+}
+
+.imgReserve:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+  transition-timing-function: ease-in;
+  transition: 1.5s;
 }
