@@ -31,7 +31,7 @@
 
             <ul class="navbar-nav ms-auto mx-3">
                 {% if request.user.is_authenticated %}
-                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-primary zoom" href="{% url 'home' %}">Mi área Personal</a></li>
+                    <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-primary zoom" href="{% url 'profile' %}">Mi área Personal</a></li>
                 {% else %}
                     <li class="sidebar-nav-item bg-dark"><a type="button" class="btn btn-success zoom" href="{% url 'login' %}">Acceder / Registrarse</a></li>
                 {% endif %}

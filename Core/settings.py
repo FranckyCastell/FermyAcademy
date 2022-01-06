@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-kz!jxp4*@o%+fg)n2hftvste_)t14+u1w0o*#kfkvopgg-wy0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.50', 'fermyacademy.com', '81.44.16.189']
 
 
 # Application definition
@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'HomeApp',  # HOME
     'RegisterApp',  # REGISTER
     'ReserveApp',  # RESERVES
+    'ProfileApp',  # PROFILE
 ]
 
 MIDDLEWARE = [
